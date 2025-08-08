@@ -1,0 +1,53 @@
+@baseUrl=http://localhost:8080
+
+### 회원가입 - success
+POST {{baseUrl}}/api/member/join
+Content-Type: application/json
+
+{
+  "email": "sample@gmail.com",
+  "password": "pwd00",
+  "nickname": "sampleUser"
+}
+
+
+### login - success
+POST {{baseUrl}}/api/member/login
+Content-Type: application/x-www-form-urlencoded
+
+username = sample@gmail.com &
+password = pwd00
+
+> {%
+    client.global.set("auth_token", response.body.accessToken);
+    client.global.set("refresh_token", response.body.refreshToken);
+%}
+
+### refresh token
+GET {{baseUrl}}/api/member/refresh?refreshToken={{refresh_token}}
+Authorization: Bearer {{auth_token}}
+
+> {%
+    client.global.set("auth_token", response.body.accessToken);
+    client.global.set("refresh_token", response.body.refreshToken);
+%}
+
+### token valid test
+GET {{baseUrl}}/member
+Authorization: Bearer {{auth_token}}
+
+### token valid test
+GET {{baseUrl}}/member/2
+Authorization: Bearer {{auth_token}}
+
+### login - failure
+POST {{baseUrl}}/api/member/login
+Content-Type: application/x-www-form-urlencoded
+
+username = sample@gmail.com &
+password = pwd00x
+
+
+### textbook
+POST {{baseUrl}}/api/member/login?username=sample@gmail.com&password=pwd00
+#Content-Type: application/x-www-form-urlencoded

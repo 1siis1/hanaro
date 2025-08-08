@@ -1,0 +1,298 @@
+2025-08-08 08:37:43 [restartedMain] INFO  com.hana7.hanaro.HanaroApplication - Starting HanaroApplication using Java 21.0.7 with PID 3520 (C:\Users\campus2H054\workspace\hana7\hanaro\build\classes\java\main started by campus2H054 in C:\Users\campus2H054\workspace\hana7\hanaro)
+2025-08-08 08:37:43 [restartedMain] DEBUG com.hana7.hanaro.HanaroApplication - Running with Spring Boot v3.5.4, Spring v6.2.9
+2025-08-08 08:37:43 [restartedMain] INFO  com.hana7.hanaro.HanaroApplication - No active profile set, falling back to 1 default profile: "default"
+2025-08-08 08:37:46 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-08-08 08:37:46 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-08 08:37:46 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-08-08 08:37:47 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-08-08 08:37:48 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@646aa7b6
+2025-08-08 08:37:48 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-08-08 08:37:50 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-08 08:37:50 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 47f271ed-5a87-4b3a-af3d-4d0e21a551de
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-08-08 08:37:50 [restartedMain] INFO  c.h.h.config.MemberSecurityConfig - --- securityConfig
+2025-08-08 08:37:50 [restartedMain] DEBUG o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, UsernamePasswordAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter
+2025-08-08 08:37:51 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-08-08 08:37:51 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-08 08:37:51 [restartedMain] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-08-08 08:37:51 [restartedMain] INFO  com.hana7.hanaro.HanaroApplication - Started HanaroApplication in 8.175 seconds (process running for 10.854)
+2025-08-08 08:42:28 [Thread-5] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-08-08 08:42:28 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-08-08 08:42:28 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-08-08 08:42:28 [restartedMain] INFO  com.hana7.hanaro.HanaroApplication - Starting HanaroApplication using Java 21.0.7 with PID 3520 (C:\Users\campus2H054\workspace\hana7\hanaro\build\classes\java\main started by campus2H054 in C:\Users\campus2H054\workspace\hana7\hanaro)
+2025-08-08 08:42:28 [restartedMain] DEBUG com.hana7.hanaro.HanaroApplication - Running with Spring Boot v3.5.4, Spring v6.2.9
+2025-08-08 08:42:28 [restartedMain] INFO  com.hana7.hanaro.HanaroApplication - No active profile set, falling back to 1 default profile: "default"
+2025-08-08 08:42:29 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-08-08 08:42:29 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-08 08:42:29 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-08-08 08:42:29 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2025-08-08 08:42:29 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3bce4a04
+2025-08-08 08:42:29 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2025-08-08 08:42:29 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-08 08:42:29 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: a73761c5-0590-4a85-b9e5-0d99145d415d
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-08-08 08:42:29 [restartedMain] INFO  c.h.h.config.MemberSecurityConfig - --- securityConfig
+2025-08-08 08:42:29 [restartedMain] DEBUG o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, UsernamePasswordAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter
+2025-08-08 08:42:30 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-08-08 08:42:30 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-08 08:42:30 [restartedMain] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-08-08 08:42:30 [restartedMain] INFO  com.hana7.hanaro.HanaroApplication - Started HanaroApplication in 1.644 seconds (process running for 289.677)
+2025-08-08 08:44:08 [Thread-7] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-08-08 08:44:08 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2025-08-08 08:44:08 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2025-08-08 08:44:08 [restartedMain] INFO  com.hana7.hanaro.HanaroApplication - Starting HanaroApplication using Java 21.0.7 with PID 3520 (C:\Users\campus2H054\workspace\hana7\hanaro\build\classes\java\main started by campus2H054 in C:\Users\campus2H054\workspace\hana7\hanaro)
+2025-08-08 08:44:08 [restartedMain] DEBUG com.hana7.hanaro.HanaroApplication - Running with Spring Boot v3.5.4, Spring v6.2.9
+2025-08-08 08:44:08 [restartedMain] INFO  com.hana7.hanaro.HanaroApplication - No active profile set, falling back to 1 default profile: "default"
+2025-08-08 08:44:09 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-08-08 08:44:09 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-08 08:44:09 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-08-08 08:44:09 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
+2025-08-08 08:44:09 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@78fc87e8
+2025-08-08 08:44:09 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
+2025-08-08 08:44:10 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-08 08:44:10 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 99d1f2e8-e545-481b-a4d0-b569a66a6714
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-08-08 08:44:10 [restartedMain] INFO  c.h.h.config.MemberSecurityConfig - --- securityConfig
+2025-08-08 08:44:10 [restartedMain] DEBUG o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, UsernamePasswordAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter
+2025-08-08 08:44:10 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-08-08 08:44:10 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-08 08:44:10 [restartedMain] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-08-08 08:44:10 [restartedMain] INFO  com.hana7.hanaro.HanaroApplication - Started HanaroApplication in 1.934 seconds (process running for 390.232)
+2025-08-08 08:44:19 [Thread-11] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-08-08 08:44:19 [Thread-11] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
+2025-08-08 08:44:19 [Thread-11] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
+2025-08-08 08:44:19 [restartedMain] INFO  com.hana7.hanaro.HanaroApplication - Starting HanaroApplication using Java 21.0.7 with PID 3520 (C:\Users\campus2H054\workspace\hana7\hanaro\build\classes\java\main started by campus2H054 in C:\Users\campus2H054\workspace\hana7\hanaro)
+2025-08-08 08:44:19 [restartedMain] DEBUG com.hana7.hanaro.HanaroApplication - Running with Spring Boot v3.5.4, Spring v6.2.9
+2025-08-08 08:44:19 [restartedMain] INFO  com.hana7.hanaro.HanaroApplication - No active profile set, falling back to 1 default profile: "default"
+2025-08-08 08:44:20 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-08-08 08:44:20 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-08 08:44:20 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-08-08 08:44:20 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Starting...
+2025-08-08 08:44:20 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7522d5a2
+2025-08-08 08:44:20 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Start completed.
+2025-08-08 08:44:21 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-08 08:44:21 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 7acbab58-a257-4171-ba60-9831751ca291
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-08-08 08:44:21 [restartedMain] INFO  c.h.h.config.MemberSecurityConfig - --- securityConfig
+2025-08-08 08:44:21 [restartedMain] DEBUG o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, UsernamePasswordAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter
+2025-08-08 08:44:21 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-08-08 08:44:21 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-08 08:44:21 [restartedMain] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-08-08 08:44:22 [restartedMain] INFO  com.hana7.hanaro.HanaroApplication - Started HanaroApplication in 2.765 seconds (process running for 401.583)
+2025-08-08 08:44:28 [Thread-15] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-08-08 08:44:28 [Thread-15] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown initiated...
+2025-08-08 08:44:28 [Thread-15] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown completed.
+2025-08-08 08:44:28 [restartedMain] INFO  com.hana7.hanaro.HanaroApplication - Starting HanaroApplication using Java 21.0.7 with PID 3520 (C:\Users\campus2H054\workspace\hana7\hanaro\build\classes\java\main started by campus2H054 in C:\Users\campus2H054\workspace\hana7\hanaro)
+2025-08-08 08:44:28 [restartedMain] DEBUG com.hana7.hanaro.HanaroApplication - Running with Spring Boot v3.5.4, Spring v6.2.9
+2025-08-08 08:44:28 [restartedMain] INFO  com.hana7.hanaro.HanaroApplication - No active profile set, falling back to 1 default profile: "default"
+2025-08-08 08:44:29 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-08-08 08:44:29 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-08 08:44:29 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-08-08 08:44:29 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Starting...
+2025-08-08 08:44:29 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@497ef4bd
+2025-08-08 08:44:29 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Start completed.
+2025-08-08 08:44:29 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-08 08:44:29 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 4409461b-c2a9-4a6c-b113-f8c2bcdaa860
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-08-08 08:44:29 [restartedMain] INFO  c.h.h.config.MemberSecurityConfig - --- securityConfig
+2025-08-08 08:44:29 [restartedMain] DEBUG o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, UsernamePasswordAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter
+2025-08-08 08:44:30 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-08-08 08:44:30 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-08 08:44:30 [restartedMain] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-08-08 08:44:30 [restartedMain] INFO  com.hana7.hanaro.HanaroApplication - Started HanaroApplication in 1.647 seconds (process running for 409.738)
+2025-08-08 08:44:31 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown initiated...
+2025-08-08 08:44:31 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown completed.
+2025-08-08 09:23:44 [restartedMain] INFO  com.hana7.hanaro.HanaroApplication - Starting HanaroApplication using Java 21.0.7 with PID 11100 (C:\Users\campus2H054\workspace\hana7\hanaro\build\classes\java\main started by campus2H054 in C:\Users\campus2H054\workspace\hana7\hanaro)
+2025-08-08 09:23:44 [restartedMain] DEBUG com.hana7.hanaro.HanaroApplication - Running with Spring Boot v3.5.4, Spring v6.2.9
+2025-08-08 09:23:44 [restartedMain] INFO  com.hana7.hanaro.HanaroApplication - No active profile set, falling back to 1 default profile: "default"
+2025-08-08 09:23:46 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-08-08 09:23:46 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-08 09:23:46 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-08-08 09:23:46 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-08-08 09:23:46 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@45aea2df
+2025-08-08 09:23:46 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-08-08 09:23:49 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-08 09:23:49 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 734880cd-9254-422d-a7c5-14406a56025a
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-08-08 09:23:49 [restartedMain] INFO  c.h.h.config.MemberSecurityConfig - --- securityConfig
+2025-08-08 09:23:49 [restartedMain] DEBUG o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, UsernamePasswordAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter
+2025-08-08 09:23:50 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-08-08 09:23:50 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-08 09:23:50 [restartedMain] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-08-08 09:23:50 [restartedMain] INFO  com.hana7.hanaro.HanaroApplication - Started HanaroApplication in 6.167 seconds (process running for 8.184)
+2025-08-08 09:27:00 [Thread-5] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-08-08 09:27:00 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-08-08 09:27:00 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-08-08 09:27:00 [restartedMain] INFO  com.hana7.hanaro.HanaroApplication - Starting HanaroApplication using Java 21.0.7 with PID 11100 (C:\Users\campus2H054\workspace\hana7\hanaro\build\classes\java\main started by campus2H054 in C:\Users\campus2H054\workspace\hana7\hanaro)
+2025-08-08 09:27:00 [restartedMain] DEBUG com.hana7.hanaro.HanaroApplication - Running with Spring Boot v3.5.4, Spring v6.2.9
+2025-08-08 09:27:00 [restartedMain] INFO  com.hana7.hanaro.HanaroApplication - No active profile set, falling back to 1 default profile: "default"
+2025-08-08 09:27:01 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-08-08 09:27:01 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-08 09:27:01 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-08-08 09:27:01 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2025-08-08 09:27:01 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@47c65734
+2025-08-08 09:27:01 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2025-08-08 09:27:02 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-08 09:27:02 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: e2c12dc2-150b-4692-b132-e4e0c1fab38e
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-08-08 09:27:02 [restartedMain] INFO  c.h.h.config.MemberSecurityConfig - --- securityConfig
+2025-08-08 09:27:02 [restartedMain] DEBUG o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, UsernamePasswordAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter
+2025-08-08 09:27:02 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-08-08 09:27:02 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-08 09:27:02 [restartedMain] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-08-08 09:27:02 [restartedMain] INFO  com.hana7.hanaro.HanaroApplication - Started HanaroApplication in 2.184 seconds (process running for 200.665)
+2025-08-08 09:27:16 [Thread-7] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-08-08 09:27:16 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2025-08-08 09:27:16 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2025-08-08 09:27:16 [restartedMain] INFO  com.hana7.hanaro.HanaroApplication - Starting HanaroApplication using Java 21.0.7 with PID 11100 (C:\Users\campus2H054\workspace\hana7\hanaro\build\classes\java\main started by campus2H054 in C:\Users\campus2H054\workspace\hana7\hanaro)
+2025-08-08 09:27:16 [restartedMain] DEBUG com.hana7.hanaro.HanaroApplication - Running with Spring Boot v3.5.4, Spring v6.2.9
+2025-08-08 09:27:16 [restartedMain] INFO  com.hana7.hanaro.HanaroApplication - No active profile set, falling back to 1 default profile: "default"
+2025-08-08 09:27:17 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-08-08 09:27:17 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-08 09:27:17 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-08-08 09:27:17 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
+2025-08-08 09:27:17 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5c2e13e0
+2025-08-08 09:27:17 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
+2025-08-08 09:27:18 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-08 09:27:18 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: cc01f530-e807-4809-a541-b49596ea01a2
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-08-08 09:27:18 [restartedMain] INFO  c.h.h.config.MemberSecurityConfig - --- securityConfig
+2025-08-08 09:27:18 [restartedMain] DEBUG o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, UsernamePasswordAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter
+2025-08-08 09:27:18 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-08-08 09:27:18 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-08 09:27:18 [restartedMain] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-08-08 09:27:18 [restartedMain] INFO  com.hana7.hanaro.HanaroApplication - Started HanaroApplication in 2.357 seconds (process running for 216.722)
+2025-08-08 09:27:20 [Thread-11] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-08-08 09:27:20 [Thread-11] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
+2025-08-08 09:27:20 [Thread-11] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
+2025-08-08 09:27:20 [restartedMain] INFO  com.hana7.hanaro.HanaroApplication - Starting HanaroApplication using Java 21.0.7 with PID 11100 (C:\Users\campus2H054\workspace\hana7\hanaro\build\classes\java\main started by campus2H054 in C:\Users\campus2H054\workspace\hana7\hanaro)
+2025-08-08 09:27:20 [restartedMain] DEBUG com.hana7.hanaro.HanaroApplication - Running with Spring Boot v3.5.4, Spring v6.2.9
+2025-08-08 09:27:20 [restartedMain] INFO  com.hana7.hanaro.HanaroApplication - No active profile set, falling back to 1 default profile: "default"
+2025-08-08 09:27:21 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-08-08 09:27:21 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-08 09:27:21 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-08-08 09:27:21 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Starting...
+2025-08-08 09:27:21 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@479f401
+2025-08-08 09:27:21 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Start completed.
+2025-08-08 09:27:22 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-08 09:27:22 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: cc978cae-1648-4f89-8020-5a322a175997
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-08-08 09:27:22 [restartedMain] INFO  c.h.h.config.MemberSecurityConfig - --- securityConfig
+2025-08-08 09:27:22 [restartedMain] DEBUG o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, UsernamePasswordAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter
+2025-08-08 09:27:23 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-08-08 09:27:23 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-08 09:27:23 [restartedMain] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-08-08 09:27:23 [restartedMain] INFO  com.hana7.hanaro.HanaroApplication - Started HanaroApplication in 2.901 seconds (process running for 221.081)
+2025-08-08 09:32:52 [Thread-15] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-08-08 09:32:52 [Thread-15] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown initiated...
+2025-08-08 09:32:52 [Thread-15] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown completed.
+2025-08-08 09:32:52 [restartedMain] INFO  com.hana7.hanaro.HanaroApplication - Starting HanaroApplication using Java 21.0.7 with PID 11100 (C:\Users\campus2H054\workspace\hana7\hanaro\build\classes\java\main started by campus2H054 in C:\Users\campus2H054\workspace\hana7\hanaro)
+2025-08-08 09:32:52 [restartedMain] DEBUG com.hana7.hanaro.HanaroApplication - Running with Spring Boot v3.5.4, Spring v6.2.9
+2025-08-08 09:32:52 [restartedMain] INFO  com.hana7.hanaro.HanaroApplication - No active profile set, falling back to 1 default profile: "default"
+2025-08-08 09:32:52 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-08-08 09:32:52 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-08 09:32:52 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-08-08 09:32:52 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Starting...
+2025-08-08 09:32:52 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@64fc9f24
+2025-08-08 09:32:52 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Start completed.
+2025-08-08 09:32:53 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-08 09:32:53 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: e4fc79dd-e6b7-4ff6-8e89-e2ecef0d4dec
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-08-08 09:32:53 [restartedMain] INFO  c.h.h.config.MemberSecurityConfig - --- securityConfig
+2025-08-08 09:32:53 [restartedMain] DEBUG o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, UsernamePasswordAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter
+2025-08-08 09:32:54 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-08-08 09:32:54 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-08 09:32:54 [restartedMain] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-08-08 09:32:54 [restartedMain] INFO  com.hana7.hanaro.HanaroApplication - Started HanaroApplication in 2.224 seconds (process running for 552.24)
+2025-08-08 09:33:42 [Thread-19] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-08-08 09:33:42 [Thread-19] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown initiated...
+2025-08-08 09:33:42 [Thread-19] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown completed.
+2025-08-08 09:33:42 [restartedMain] INFO  com.hana7.hanaro.HanaroApplication - Starting HanaroApplication using Java 21.0.7 with PID 11100 (C:\Users\campus2H054\workspace\hana7\hanaro\build\classes\java\main started by campus2H054 in C:\Users\campus2H054\workspace\hana7\hanaro)
+2025-08-08 09:33:42 [restartedMain] DEBUG com.hana7.hanaro.HanaroApplication - Running with Spring Boot v3.5.4, Spring v6.2.9
+2025-08-08 09:33:42 [restartedMain] INFO  com.hana7.hanaro.HanaroApplication - No active profile set, falling back to 1 default profile: "default"
+2025-08-08 09:33:43 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-08-08 09:33:43 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-08 09:33:43 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-08-08 09:33:43 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Starting...
+2025-08-08 09:33:43 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-6 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2d1f83c9
+2025-08-08 09:33:43 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Start completed.
+2025-08-08 09:33:45 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-08 09:33:45 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: d370e5a0-db03-4df8-918f-fb1f78ad9255
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-08-08 09:33:45 [restartedMain] INFO  c.h.h.config.MemberSecurityConfig - --- securityConfig
+2025-08-08 09:33:45 [restartedMain] DEBUG o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, UsernamePasswordAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter
+2025-08-08 09:33:46 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-08-08 09:33:46 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-08 09:33:46 [restartedMain] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-08-08 09:33:46 [restartedMain] INFO  com.hana7.hanaro.HanaroApplication - Started HanaroApplication in 3.378 seconds (process running for 604.099)
+2025-08-08 09:33:47 [Thread-23] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-08-08 09:33:47 [Thread-23] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Shutdown initiated...
+2025-08-08 09:33:47 [Thread-23] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Shutdown completed.
+2025-08-08 09:33:47 [restartedMain] INFO  com.hana7.hanaro.HanaroApplication - Starting HanaroApplication using Java 21.0.7 with PID 11100 (C:\Users\campus2H054\workspace\hana7\hanaro\build\classes\java\main started by campus2H054 in C:\Users\campus2H054\workspace\hana7\hanaro)
+2025-08-08 09:33:47 [restartedMain] DEBUG com.hana7.hanaro.HanaroApplication - Running with Spring Boot v3.5.4, Spring v6.2.9
+2025-08-08 09:33:47 [restartedMain] INFO  com.hana7.hanaro.HanaroApplication - No active profile set, falling back to 1 default profile: "default"
+2025-08-08 09:33:48 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-08-08 09:33:48 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-08 09:33:48 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-08-08 09:33:48 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Starting...
+2025-08-08 09:33:48 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-7 - Added connection com.mysql.cj.jdbc.ConnectionImpl@330d0d50
+2025-08-08 09:33:48 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Start completed.
+2025-08-08 09:33:50 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-08 09:33:50 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: f5fc66ea-dbe4-4ca9-91dc-95b779876f3a
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-08-08 09:33:50 [restartedMain] INFO  c.h.h.config.MemberSecurityConfig - --- securityConfig
+2025-08-08 09:33:50 [restartedMain] DEBUG o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, UsernamePasswordAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter
+2025-08-08 09:33:50 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-08-08 09:33:50 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-08 09:33:50 [restartedMain] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-08-08 09:33:50 [restartedMain] INFO  com.hana7.hanaro.HanaroApplication - Started HanaroApplication in 2.8 seconds (process running for 608.523)
+2025-08-08 09:33:50 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Shutdown initiated...
+2025-08-08 09:33:50 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Shutdown completed.

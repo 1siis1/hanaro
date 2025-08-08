@@ -1,6 +1,6 @@
 package com.hana7.hanaro.service;
 
-import com.hana7.hanaro.dto.MemberResponseDTO;
+import com.hana7.hanaro.dto.MemberResponseDTO; // MemberResponseDTO로 변경
 import com.hana7.hanaro.dto.MemberJoinRequestDTO;
 import com.hana7.hanaro.dto.MemberLoginRequestDTO;
 import com.hana7.hanaro.entity.Member;
@@ -30,39 +30,52 @@ public class MemberService {
 		this.jwtTokenProvider = jwtTokenProvider;
 	}
 
-	public void join(MemberJoinRequestDTO request) {
-		if (memberRepository.findByEmail(request.getEmail()).isPresent()) {
+	public void join(MemberJoinRequestDTO requestDTO) {
+		if (memberRepository.findByEmail(requestDTO.getEmail()).isPresent()) {
 			throw new IllegalArgumentException("이미 사용 중인 이메일입니다.");
 		}
 
 		Member member = Member.builder()
-			.email(request.getEmail())
-			.password(passwordEncoder.encode(request.getPassword()))
-			.nickname(request.getNickname())
-			.role(MemberRole.MEMBER)
+			.email(requestDTO.getEmail())
+			.password(passwordEncoder.encode(requestDTO.getPassword()))
+			.nickname(requestDTO.getNickname())
+			.role(MemberRole.ROLE_MEMBER)
 			.build();
 
 		memberRepository.save(member);
 	}
 
-	public MemberResponseDTO login(MemberLoginRequestDTO request) {
+	public void joinAdmin(MemberJoinRequestDTO requestDTO) {
+		if (memberRepository.findByEmail(requestDTO.getEmail()).isPresent()) {
+			throw new IllegalArgumentException("이미 사용 중인 이메일입니다.");
+		}
+
+		Member member = Member.builder()
+			.email(requestDTO.getEmail())
+			.password(passwordEncoder.encode(requestDTO.getPassword()))
+			.nickname(requestDTO.getNickname())
+			.role(MemberRole.ROLE_ADMIN)
+			.build();
+
+		memberRepository.save(member);
+	}
+
+	public MemberResponseDTO login(MemberLoginRequestDTO requestDTO) {
 		Authentication authentication = authenticationManager.authenticate(
-			new UsernamePasswordAuthenticationToken(request.getEmail(), request.getPassword())
+			new UsernamePasswordAuthenticationToken(requestDTO.getEmail(), requestDTO.getPassword())
 		);
 
 		String token = jwtTokenProvider.generateToken(authentication);
-		Member member = memberRepository.findByEmail(request.getEmail())
+		Member member = memberRepository.findByEmail(requestDTO.getEmail())
 			.orElseThrow(() -> new IllegalArgumentException("사용자를 찾을 수 없습니다."));
 
 		return MemberResponseDTO.builder()
 			.accessToken(token)
+			.tokenType("Bearer")
 			.id(member.getId())
 			.email(member.getEmail())
 			.nickname(member.getNickname())
 			.role(member.getRole().name())
 			.build();
-	}
-
-	public void delete(Long userId) {
 	}
 }

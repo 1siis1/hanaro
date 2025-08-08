@@ -32,7 +32,7 @@ public class ItemService {
 		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 		Collection<? extends GrantedAuthority> authorities = authentication.getAuthorities();
 		boolean isAdmin = authorities.stream()
-			.anyMatch(a -> a.getAuthority().equals(MemberRole.ADMIN.name()));
+			.anyMatch(a -> a.getAuthority().equals(MemberRole.ROLE_ADMIN.name()));
 
 		if (!isAdmin) {
 			throw new AccessDeniedException("상품 등록 권한이 없습니다.");

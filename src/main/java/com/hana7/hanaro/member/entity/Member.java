@@ -1,44 +1,38 @@
 package com.hana7.hanaro.member.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.validation.constraints.Email;
-import lombok.AllArgsConstructor;
+import jakarta.persistence.*;
+import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
 
 @Entity
-@Builder
 @Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
-@ToString
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Member {
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	@Column(unique = true, nullable = false)
-	@Email
+	@Column(nullable = false, unique = true)
 	private String email;
 
 	@Column(nullable = false)
 	private String password;
 
-	@Column(unique = true, nullable = false)
+	@Column(nullable = false)
 	private String nickname;
 
 	@Enumerated(EnumType.STRING)
 	@Column(nullable = false)
-	private MemberRole role; // 유저는 하나의 역할만(admin or member)
-}
+	private Role role;
 
+	@Builder
+	public Member(String email, String password, String nickname, Role role) {
+		this.email = email;
+		this.password = password;
+		this.nickname = nickname;
+		this.role = role;
+	}
+}

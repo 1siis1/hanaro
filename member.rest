@@ -67,10 +67,7 @@ Content-Type: application/json
 %}
 
 
-###
-# ==================================
-# 5. 로그인 (실패 - 잘못된 비밀번호)
-# ==================================
+### 5. 로그인 (실패 - 잘못된 비밀번호)
 POST {{host}}/auth/login
 Content-Type: application/json
 
@@ -79,12 +76,16 @@ Content-Type: application/json
   "password": "wrongpassword!"
 }
 
+### 관리자 로그인 테스트 ###
+POST {{host}}/auth/login
+Content-Type: application/json
 
-###
-# ==================================
-# 6. 인증이 필요한 API 테스트 예시
-# ==================================
-# 위에서 저장된 accessToken을 사용하여 인증이 필요한 API를 호출하는 예시입니다.
-# (예: /api/mypage/orders)
+{
+  "email": "hanaro@admin.com",
+  "password": "12345678"
+}
+
+###6. 인증이 필요한 API 테스트 예시
+
 GET {{host}}/api/some-protected-resource
 Authorization: Bearer {{accessToken}}

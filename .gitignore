@@ -1,10 +1,16 @@
 HELP.md
 .gradle
 build/
+logs/
+mysql/
+src/main/resources/makefor/
+docker-compose.yml
+scr/main/generated
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
 !**/src/test/**/build/
-mysql/
+src/main/resources/static/tmp
+src/main/resources/static/upload
 
 ### STS ###
 .apt_generated

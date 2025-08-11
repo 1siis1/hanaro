@@ -1,52 +1,81 @@
 package com.hana7.hanaro.item.controller;
 
-import com.hana7.hanaro.item.dto.ItemCreateRequestDTO;
-import com.hana7.hanaro.item.dto.ItemImageDTO;
-import com.hana7.hanaro.item.dto.ItemResponseDTO;
-import com.hana7.hanaro.item.service.FileService;
+import com.hana7.hanaro.item.dto.ItemDTO;
+import com.hana7.hanaro.item.dto.ItemImageResponseDTO;
 import com.hana7.hanaro.item.service.ItemService;
-import jakarta.validation.Valid;
+import com.hana7.hanaro.response.ApiResponse;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.io.IOException;
 import java.util.List;
-import java.util.stream.Collectors;
+
 
 @RestController
 @RequestMapping("/items")
 @RequiredArgsConstructor
+@Slf4j
 public class ItemController {
 
 	private final ItemService itemService;
-	private final FileService fileService; // FileService 주입
 
-	@PostMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
-	@PreAuthorize("hasRole('ADMIN')")
-	public ResponseEntity<Long> createItem(@Valid @RequestPart("item") ItemCreateRequestDTO request,
-		@RequestPart("images") List<MultipartFile> itemImageFiles) throws IOException {
-
-		// 1. 파일들을 먼저 서버에 저장하고, 결과(DTO) 리스트를 받음
-		List<ItemImageDTO> imageDTOs = itemImageFiles.stream()
-			.map(file -> {
-				try {
-					return fileService.uploadFile(file);
-				} catch (IOException e) {
-					// 실제 프로덕션에서는 에러 처리를 더 정교하게 해야 합니다.
-					throw new RuntimeException("파일 업로드에 실패했습니다.", e);
-				}
-			})
-			.collect(Collectors.toList());
-
-		// 2. 상품 정보와 이미지 정보(DTO) 리스트를 서비스에 전달
-		Long itemId = itemService.createItem(request, imageDTOs);
-		return ResponseEntity.status(HttpStatus.CREATED).body(itemId);
+	@Tag(name = "상품")
+	@Operation(summary = "상품 추가", description = "상품을 추가합니다")
+	@PostMapping
+	public ResponseEntity<ApiResponse<ItemDTO>> addItem(@RequestBody ItemDTO requestDTO) {
+		ItemDTO registeredItem = itemService.addItem(requestDTO);
+		return ResponseEntity.ok(ApiResponse.onSuccess(registeredItem, "상품 추가 완료"));
 	}
 
-	// ... 나머지 GET, PUT, DELETE 메서드 ...
+	@Tag(name = "상품")
+	@Operation(summary = "상품 리스트", description = "상품 목록을 조회합니다")
+	@GetMapping
+	public ResponseEntity<ApiResponse<List<ItemDTO>>> getAllItems() {
+		List<ItemDTO> items = itemService.getAllItems();
+		return ResponseEntity.ok(ApiResponse.onSuccess(items, "상품 리스트"));
+	}
+
+	@Tag(name = "상품")
+	@Operation(summary = "상품 조회", description = "상품을 조회합니다")
+	@GetMapping("/{itemId}")
+	public ResponseEntity<ApiResponse<ItemDTO>> getItemById(@PathVariable Long itemId) {
+		ItemDTO item = itemService.getItemById(itemId);
+		return ResponseEntity.ok(ApiResponse.onSuccess(item, "상품 조회 완료"));
+	}
+
+	@Tag(name = "상품")
+	@Operation(summary = "상품 수정", description = "상품을 수정합니다")
+	@PutMapping("/{itemId}")
+	public ResponseEntity<ApiResponse<ItemDTO>> updateItem(@PathVariable Long itemId, @RequestBody ItemDTO requestDTO) {
+		ItemDTO updatedItem = itemService.updateItem(itemId, requestDTO);
+		return ResponseEntity.ok(ApiResponse.onSuccess(updatedItem, "상품 수정 완료"));
+	}
+
+	@Tag(name = "상품")
+	@Operation(summary = "상품 삭제", description = "상품을 삭제합니다")
+	@DeleteMapping("/{itemId}")
+	public ResponseEntity<ApiResponse<Void>> deleteItem(@PathVariable Long itemId) {
+		itemService.deleteItem(itemId);
+		return ResponseEntity.ok(ApiResponse.onSuccess(null, "상품 삭제 완료"));
+	}
+
+	@Tag(name = "상품 이미지")
+	@Operation(summary = "상품 이미지 추가", description = "상품 이미지를 추가합니다")
+	@PostMapping(value = "/{itemId}/add", consumes = "multipart/form-data")
+	public ResponseEntity<ApiResponse<ItemImageResponseDTO>> addImageToItem(@PathVariable Long itemId, @RequestPart("file") MultipartFile file) {
+		ItemImageResponseDTO itemImage = itemService.addImageToItem(itemId, file);
+		return ResponseEntity.ok(ApiResponse.onSuccess(itemImage, "상품 이미지 등록 완료"));
+	}
+
+	@Tag(name = "상품 이미지")
+	@Operation(summary = "상품 이미지 삭제", description = "상품 이미지를 삭제합니다")
+	@DeleteMapping("/{imageId}/delete")
+	public ResponseEntity<ApiResponse<Void>> deleteImageFromItem(@PathVariable Long imageId) {
+		itemService.deleteImageFromItem(imageId);
+		return ResponseEntity.ok(ApiResponse.onSuccess(null, "상품 이미지 삭제 완료"));
+	}
 }

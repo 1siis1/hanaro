@@ -9,8 +9,9 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class ItemImageResponseDTO {
-	private Long imageId;
-	private String imageUrl;
+public class ItemDTO {
 	private Long itemId;
+	private String itemName;
+	private int price;
+	private int stock;
 }

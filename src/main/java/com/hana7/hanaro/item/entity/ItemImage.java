@@ -4,24 +4,21 @@ import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Table(name = "item_image")
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 @Getter
 @Setter
-@NoArgsConstructor
-@AllArgsConstructor
-@Builder
+@Table(name = "ItemImage")
 public class ItemImage {
-
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "item_image_id")
-	private Long id;
+	private Long imageId;
 
-	private String orgName; // 원본 파일명 (예: my_cat.jpg)
-	private String saveName; // 서버에 저장될 고유 파일명 (예: uuid.jpg)
-	private String saveDir;  // 파일이 저장된 경로 (예: /upload/2025/08/10)
+	@Column(nullable = false)
+	private String imageUrl;
 
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "item_id")
+	@JoinColumn(name = "itemId", nullable = false)
 	private Item item;
 }

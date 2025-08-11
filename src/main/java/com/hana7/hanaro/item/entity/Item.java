@@ -12,6 +12,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -20,25 +21,33 @@ import lombok.Setter;
 
 @Entity
 @Builder
-@Getter @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Item extends BaseEntity {
+@Table(name = "Item")
+@Getter
+@Setter
+public class Item {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	private Long itemId;
 
-	@Column(nullable = false)
-	private String name;
+	@Column(length = 20, nullable = false)
+	private String itemName;
 
-	@Column(nullable = false)
 	private int price;
 
-	@Builder.Default
-	private int stock = 1;
+	private int stock;
 
-	@OneToMany(mappedBy = "item", cascade = CascadeType.ALL)
-	@Builder.Default
+	@OneToMany(mappedBy = "item", cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<ItemImage> itemImages = new ArrayList<>();
 
+	public void addImage(ItemImage itemImage) {
+		itemImages.add(itemImage);
+		itemImage.setItem(this);
+	}
+
+	public void removeImage(ItemImage itemImage) {
+		itemImages.remove(itemImage);
+		itemImage.setItem(null);
+	}
 }

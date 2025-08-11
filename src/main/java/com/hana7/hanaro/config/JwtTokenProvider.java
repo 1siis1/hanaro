@@ -1,17 +1,17 @@
 package com.hana7.hanaro.config;
 
 import com.hana7.hanaro.auth.dto.TokenResponseDTO;
-
-import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.SignatureAlgorithm;
+import io.jsonwebtoken.*;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
+import lombok.extern.slf4j.Slf4j; // Slf4j import 추가
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.Authentication;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Component; // ❗️ [추가] Component import
 import java.security.Key;
 import java.util.Date;
 
+@Slf4j
 @Component
 public class JwtTokenProvider {
 	private final Key key;
@@ -34,6 +34,7 @@ public class JwtTokenProvider {
 			.setExpiration(accessTokenExpiresIn)
 			.signWith(key, SignatureAlgorithm.HS256)
 			.compact();
+		// DTO 이름 통일
 		return new TokenResponseDTO(accessToken);
 	}
 
@@ -46,6 +47,7 @@ public class JwtTokenProvider {
 			Jwts.parserBuilder().setSigningKey(key).build().parseClaimsJws(token);
 			return true;
 		} catch (Exception e) {
+			log.warn("Invalid JWT Token: {}", e.getMessage());
 			return false;
 		}
 	}

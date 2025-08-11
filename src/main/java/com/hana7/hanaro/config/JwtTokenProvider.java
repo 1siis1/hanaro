@@ -1,7 +1,7 @@
 package com.hana7.hanaro.config;
 
-import com.hana7.hanaro.auth.dto.TokenResponse;
-import io.jsonwebtoken.Claims;
+import com.hana7.hanaro.auth.dto.TokenResponseDTO;
+
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.io.Decoders;
@@ -26,7 +26,7 @@ public class JwtTokenProvider {
 		this.accessTokenValidityInMilliseconds = accessTokenValidityInMilliseconds;
 	}
 
-	public TokenResponse generateToken(Authentication authentication) {
+	public TokenResponseDTO generateToken(Authentication authentication) {
 		long now = (new Date()).getTime();
 		Date accessTokenExpiresIn = new Date(now + accessTokenValidityInMilliseconds);
 		String accessToken = Jwts.builder()
@@ -34,7 +34,7 @@ public class JwtTokenProvider {
 			.setExpiration(accessTokenExpiresIn)
 			.signWith(key, SignatureAlgorithm.HS256)
 			.compact();
-		return new TokenResponse(accessToken);
+		return new TokenResponseDTO(accessToken);
 	}
 
 	public String getUsername(String token) {

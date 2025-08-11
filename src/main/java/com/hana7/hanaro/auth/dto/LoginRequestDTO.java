@@ -1,16 +1,17 @@
 package com.hana7.hanaro.auth.dto;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Size;
 import lombok.Getter;
 
 @Getter
-public class SignUpRequest {
+public class LoginRequestDTO {
 	@NotBlank @Email
+	@Schema(name = "email", example = "hanaro@admin.com")
 	private String email;
-	@NotBlank @Size(min = 8)
-	private String password;
+
 	@NotBlank
-	private String nickname;
+	@Schema(name = "password", example = "12345678")
+	private String password;
 }

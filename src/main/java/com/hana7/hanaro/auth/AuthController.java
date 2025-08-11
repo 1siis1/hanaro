@@ -1,8 +1,8 @@
 package com.hana7.hanaro.auth;
 
-import com.hana7.hanaro.auth.dto.LoginRequest;
-import com.hana7.hanaro.auth.dto.SignUpRequest;
-import com.hana7.hanaro.auth.dto.TokenResponse;
+import com.hana7.hanaro.auth.dto.LoginRequestDTO;
+import com.hana7.hanaro.auth.dto.SignUpRequestDTO;
+import com.hana7.hanaro.auth.dto.TokenResponseDTO;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -19,14 +19,14 @@ public class AuthController {
 	private final AuthService authService;
 
 	@PostMapping("/signup")
-	public ResponseEntity<Void> signUp(@Valid @RequestBody SignUpRequest request) {
+	public ResponseEntity<Void> signUp(@Valid @RequestBody SignUpRequestDTO request) {
 		authService.signUp(request);
 		return ResponseEntity.ok().build();
 	}
 
 	@PostMapping("/login")
-	public ResponseEntity<TokenResponse> login(@Valid @RequestBody LoginRequest request) {
-		TokenResponse token = authService.login(request);
+	public ResponseEntity<TokenResponseDTO> login(@Valid @RequestBody LoginRequestDTO request) {
+		TokenResponseDTO token = authService.login(request);
 		return ResponseEntity.ok(token);
 	}
 }

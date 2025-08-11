@@ -1,5 +1,6 @@
 package com.hana7.hanaro.member.entity;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
@@ -30,12 +31,12 @@ public class Member {
 	@Enumerated(EnumType.STRING)
 	@Column(nullable = false)
 	private Role role;
-
-	@Builder
-	public Member(String email, String password, String nickname, Role role) {
-		this.email = email;
-		this.password = password;
-		this.nickname = nickname;
-		this.role = role;
-	}
+	//
+	// @Builder
+	// public Member(String email, String password, String nickname, Role role) {
+	// 	this.email = email;
+	// 	this.password = password;
+	// 	this.nickname = nickname;
+	// 	this.role = role;
+	// }
 }

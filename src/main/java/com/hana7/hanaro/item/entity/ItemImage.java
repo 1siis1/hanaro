@@ -1,38 +1,27 @@
 package com.hana7.hanaro.item.entity;
 
-import org.hibernate.annotations.OnDelete;
-import org.hibernate.annotations.OnDeleteAction;
-
-import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
-import jakarta.persistence.ForeignKey;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import jakarta.persistence.*;
+import lombok.*;
 
 @Entity
-@Getter @Setter
-@Builder
+@Table(name = "item_image")
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class ItemImage {
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
+	@Column(name = "item_image_id")
+	private Long id;
 
-	private String imgUrl;
+	private String orgName; // 원본 파일명 (예: my_cat.jpg)
+	private String saveName; // 서버에 저장될 고유 파일명 (예: uuid.jpg)
+	private String saveDir;  // 파일이 저장된 경로 (예: /upload/2025/08/10)
 
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "item",
-		foreignKey = @ForeignKey(name="fk_ItemImage_Item"))
-	@OnDelete(action = OnDeleteAction.CASCADE)
+	@JoinColumn(name = "item_id")
 	private Item item;
-
 }

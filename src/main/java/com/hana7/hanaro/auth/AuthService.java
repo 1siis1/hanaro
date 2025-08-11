@@ -1,12 +1,14 @@
 package com.hana7.hanaro.auth;
 
-import com.hana7.hanaro.auth.dto.LoginRequest;
-import com.hana7.hanaro.auth.dto.SignUpRequest;
-import com.hana7.hanaro.auth.dto.TokenResponse;
+import com.hana7.hanaro.auth.dto.LoginRequestDTO;
+import com.hana7.hanaro.auth.dto.SignUpRequestDTO;
+import com.hana7.hanaro.auth.dto.TokenResponseDTO;
 import com.hana7.hanaro.config.JwtTokenProvider;
 import com.hana7.hanaro.member.entity.Member;
 import com.hana7.hanaro.member.entity.Role;
 import com.hana7.hanaro.member.repository.MemberRepository;
+
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -25,7 +27,7 @@ public class AuthService {
 	private final JwtTokenProvider jwtTokenProvider;
 
 	@Transactional
-	public void signUp(SignUpRequest request) {
+	public void signUp(@Valid SignUpRequestDTO request) {
 		if (memberRepository.existsByEmail(request.getEmail())) {
 			throw new IllegalArgumentException("이미 사용 중인 이메일입니다.");
 		}
@@ -38,7 +40,7 @@ public class AuthService {
 		memberRepository.save(member);
 	}
 
-	public TokenResponse login(LoginRequest request) {
+	public TokenResponseDTO login(LoginRequestDTO request) {
 		Authentication authentication = authenticationManager.authenticate(
 			new UsernamePasswordAuthenticationToken(request.getEmail(), request.getPassword())
 		);

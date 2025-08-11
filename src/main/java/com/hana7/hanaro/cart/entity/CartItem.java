@@ -9,10 +9,11 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
 @Builder
-@Getter
+@Getter @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 public class CartItem {
@@ -21,16 +22,21 @@ public class CartItem {
 	private Long id;
 
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "cart")
+	@JoinColumn(name = "cart",
+		foreignKey = @ForeignKey(name="fk_CartItem_Cart"))
 	@OnDelete(action = OnDeleteAction.CASCADE)
 	private Cart cart;
 
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "item",
-		foreignKey = @ForeignKey(name = "fk_CartItem_Cart"))
+		foreignKey = @ForeignKey(name = "fk_CartItem_Item"))
 	@OnDelete(action = OnDeleteAction.CASCADE)
 	private Item item;
 
 	@Column(nullable = false)
-	private int cnt;
+	private int quantity;
+
+	public void addCount(int quantity) {
+		this.quantity += quantity;
+	}
 }

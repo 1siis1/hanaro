@@ -1,6 +1,7 @@
 package com.hana7.hanaro.item.controller;
 
 import com.hana7.hanaro.item.dto.ItemDTO;
+import com.hana7.hanaro.item.dto.ItemDetailDTO;
 import com.hana7.hanaro.item.dto.ItemImageResponseDTO;
 import com.hana7.hanaro.item.service.ItemService;
 import com.hana7.hanaro.response.ApiResponse;
@@ -42,8 +43,8 @@ public class ItemController {
 	@Tag(name = "상품")
 	@Operation(summary = "상품 조회", description = "상품을 조회합니다")
 	@GetMapping("/{itemId}")
-	public ResponseEntity<ApiResponse<ItemDTO>> getItemById(@PathVariable Long itemId) {
-		ItemDTO item = itemService.getItemById(itemId);
+	public ResponseEntity<ApiResponse<ItemDetailDTO>> getItemById(@PathVariable Long itemId) {
+		ItemDetailDTO item = itemService.getItemDetail(itemId);
 		return ResponseEntity.ok(ApiResponse.onSuccess(item, "상품 조회 완료"));
 	}
 

@@ -34,4 +34,10 @@ public class Cart extends BaseEntity {
 	@OneToMany(mappedBy = "cart", cascade = CascadeType.ALL)
 	@Builder.Default
 	private List<CartItem> cartItems = new ArrayList<>();
+
+	public static Cart createCart(Member member) {
+		Cart cart = new Cart();
+		cart.setMember(member);
+		return cart;
+	}
 }

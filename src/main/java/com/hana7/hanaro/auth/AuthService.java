@@ -3,6 +3,8 @@ package com.hana7.hanaro.auth;
 import com.hana7.hanaro.auth.dto.LoginRequestDTO;
 import com.hana7.hanaro.auth.dto.SignUpRequestDTO;
 import com.hana7.hanaro.auth.dto.TokenResponseDTO;
+import com.hana7.hanaro.cart.entity.Cart;
+import com.hana7.hanaro.cart.repository.CartRepository;
 import com.hana7.hanaro.config.JwtTokenProvider;
 import com.hana7.hanaro.member.entity.Member;
 import com.hana7.hanaro.member.entity.Role;
@@ -22,6 +24,7 @@ import org.springframework.transaction.annotation.Transactional;
 public class AuthService {
 
 	private final MemberRepository memberRepository;
+	private final CartRepository cartRepository;
 	private final PasswordEncoder passwordEncoder;
 	private final AuthenticationManager authenticationManager;
 	private final JwtTokenProvider jwtTokenProvider;
@@ -38,6 +41,10 @@ public class AuthService {
 			.role(Role.USER)
 			.build();
 		memberRepository.save(member);
+
+
+		Cart cart = Cart.createCart(member);
+		cartRepository.save(cart);
 	}
 
 	public TokenResponseDTO login(LoginRequestDTO request) {
